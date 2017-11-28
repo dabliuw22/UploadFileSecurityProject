@@ -14,7 +14,8 @@ public MultipartResolver filterMultipartResolver() throws IOException {
 	return multipartResolver;
 }
 ```
-El método *setMaxUploadSize* del multipartResolver nos permite setear el valor máximo en bytes permitiso para el tamaño del fichero de subida.  
+El método *setMaxUploadSize* del multipartResolver nos permite setear el valor máximo en bytes permitiso para el tamaño del fichero de subida. 
+ 
 3. Configuramos el arranque del MultipartFilter antes del filtro de Spring Security, todo esto por **CSRF** activo en Spring Security como se específica en la [documentación Spring Security](https://docs.spring.io/spring-security/site/docs/5.0.0.BUILD-SNAPSHOT/reference/htmlsingle/#csrf-multipart): 
 ```[java]
 public class SecurityInitializer extends AbstractSecurityWebApplicationInitializer {
