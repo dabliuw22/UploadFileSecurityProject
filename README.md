@@ -6,6 +6,7 @@ En este proyecto se cargaran en la base de datos y visualizaran Noticias con con
 <Context ... allowCasualMultipartParsing="true">
 ...
 </Context>```
+
 2. Configuramos el arranque del MultipartFilter antes del filtro de Spring Security, todo esto por **CSRF** activo en Spring Security: 
 ```[Java]
 public class SecurityInitializer extends AbstractSecurityWebApplicationInitializer {
