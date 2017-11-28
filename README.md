@@ -7,7 +7,6 @@ En este proyecto se cargaran en la base de datos y visualizaran Noticias con con
 </Context>`
 2. Configuramos el arranque del MultipartFilter antes del filtro de Spring Security, todo esto por **CSRF** activo en Spring Security:
 `public class SecurityInitializer extends AbstractSecurityWebApplicationInitializer {
-
 	@Override
 	protected void beforeSpringSecurityFilterChain(ServletContext servletContext) {
 		insertFilters(servletContext, new MultipartFilter());
